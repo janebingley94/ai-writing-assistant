@@ -56,3 +56,23 @@ class GenerationResponse(BaseModel):
     generation_type: str
     metadata: dict
     created_at: datetime
+
+
+class GenerationRecordResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: str
+    content: str
+    word_count: int
+    generation_type: str
+    quality_score: Optional[float] = None
+    metadata: dict
+    created_at: datetime
+
+
+class TemplateResponse(BaseModel):
+    blog_tones: list[ToneBlog]
+    blog_lengths: list[LengthBlog]
+    email_types: list[EmailType]
+    email_tones: list[EmailTone]
+    summary_types: list[SummaryType]
