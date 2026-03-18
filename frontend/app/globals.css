@@ -1,0 +1,14 @@
+@config "../tailwind.config.ts";
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-ink-50 text-ink-900 antialiased;
+}
+
+.card-glow {
+  background: radial-gradient(circle at top, #ffffff 0%, #f6f2ea 50%, #efe7da 100%);
+}
